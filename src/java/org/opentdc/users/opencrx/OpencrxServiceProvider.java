@@ -23,6 +23,72 @@
  */
 package org.opentdc.users.opencrx;
 
-public class OpencrxServiceProvider {
+import java.util.List;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletContext;
+
+import org.opentdc.service.exception.DuplicateException;
+import org.opentdc.service.exception.NotFoundException;
+import org.opentdc.users.ServiceProvider;
+import org.opentdc.users.UserModel;
+
+public class OpencrxServiceProvider implements ServiceProvider {
+
+	private static final Logger logger = Logger.getLogger(OpencrxServiceProvider.class.getName());
+
+	public OpencrxServiceProvider(
+		ServletContext context, 
+		String prefix
+	) {
+		logger.info("> OpencrxServiceProvider()");
+	}
+	
+	@Override
+	public List<UserModel> list(
+		String queryType,
+		String query,
+		long position,
+		long size
+	) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserModel create(UserModel user) throws DuplicateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserModel read(String id) throws NotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserModel update(String id, UserModel user) throws NotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(String id) throws NotFoundException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
