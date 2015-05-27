@@ -81,17 +81,4 @@ public class OpencrxServiceProvider extends AbstractOpencrxServiceProvider imple
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void deleteAll() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public int count() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
