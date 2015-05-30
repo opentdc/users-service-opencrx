@@ -31,8 +31,7 @@ import javax.servlet.ServletContext;
 
 import org.openmdx.base.exception.ServiceException;
 import org.opentdc.opencrx.AbstractOpencrxServiceProvider;
-import org.opentdc.service.exception.DuplicateException;
-import org.opentdc.service.exception.NotFoundException;
+import org.opentdc.service.exception.*;
 import org.opentdc.users.ServiceProvider;
 import org.opentdc.users.UserModel;
 
@@ -59,25 +58,34 @@ public class OpencrxServiceProvider extends AbstractOpencrxServiceProvider imple
 	}
 
 	@Override
-	public UserModel create(UserModel user) throws DuplicateException {
+	public UserModel create(
+			UserModel user) 
+			throws DuplicateException, ValidationException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public UserModel read(String id) throws NotFoundException {
+	public UserModel read(
+			String id) 
+			throws NotFoundException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public UserModel update(String id, UserModel user) throws NotFoundException {
+	public UserModel update(
+			String id, 
+			UserModel user) 
+			throws NotFoundException, NotAllowedException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void delete(String id) throws NotFoundException {
+	public void delete(
+			String id) 
+			throws NotFoundException, InternalServerErrorException {
 		// TODO Auto-generated method stub
 		
 	}
