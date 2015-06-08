@@ -77,7 +77,7 @@ public class OpencrxServiceProvider extends AbstractOpencrxServiceProvider imple
 	public UserModel update(
 			String id, 
 			UserModel user) 
-			throws NotFoundException, NotAllowedException {
+			throws NotFoundException, ValidationException {
 		// TODO Auto-generated method stub
 		return null;
 	}
