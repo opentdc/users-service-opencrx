@@ -48,8 +48,8 @@ public class OpencrxServiceProvider extends AbstractOpencrxServiceProvider imple
 	
 	@Override
 	public List<UserModel> list(
-		String queryType,
 		String query,
+		String queryType,
 		long position,
 		long size
 	) {
