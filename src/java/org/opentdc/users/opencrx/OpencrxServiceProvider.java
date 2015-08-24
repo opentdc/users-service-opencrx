@@ -24,10 +24,12 @@
 package org.opentdc.users.opencrx;
 
 import java.util.List;
-import java.util.logging.Logger;
+// import java.util.logging.Logger;
+
 
 import javax.naming.NamingException;
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
 import org.openmdx.base.exception.ServiceException;
 import org.opentdc.opencrx.AbstractOpencrxServiceProvider;
@@ -37,7 +39,7 @@ import org.opentdc.users.UserModel;
 
 public class OpencrxServiceProvider extends AbstractOpencrxServiceProvider implements ServiceProvider {
 
-	private static final Logger logger = Logger.getLogger(OpencrxServiceProvider.class.getName());
+	// private static final Logger logger = Logger.getLogger(OpencrxServiceProvider.class.getName());
 
 	public OpencrxServiceProvider(
 		ServletContext context, 
@@ -59,6 +61,7 @@ public class OpencrxServiceProvider extends AbstractOpencrxServiceProvider imple
 
 	@Override
 	public UserModel create(
+			HttpServletRequest request,
 			UserModel user) 
 			throws DuplicateException, ValidationException {
 		// TODO Auto-generated method stub
@@ -75,6 +78,7 @@ public class OpencrxServiceProvider extends AbstractOpencrxServiceProvider imple
 
 	@Override
 	public UserModel update(
+			HttpServletRequest request,
 			String id, 
 			UserModel user) 
 			throws NotFoundException, ValidationException {
